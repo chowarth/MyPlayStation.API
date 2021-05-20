@@ -10,5 +10,8 @@ namespace MyPlayStation.API.Interfaces
     {
         [Get( "/userProfile/v1/users/{request.OnlineId}/profile2?fields=onlineId%2CaboutMe%2CconsoleAvailability%2ClanguagesUsed%2CavatarUrls%2CpersonalDetail%2CpersonalDetail(%40default%2CprofilePictureUrls)%2CprimaryOnlineStatus%2CtrophySummary(level%2Cprogress%2CearnedTrophies)%2Cplus%2CisOfficiallyVerified%2CfriendRelation%2CpersonalDetailSharing%2Cpresences(%40default%2C%40titleInfo%2ClastOnlineDate%2Cplatform)%2CnpId%2Cblocking%2Cfollowing%2CcurrentOnlineId%2CdisplayableOldOnlineId%2CmutualFriendsCount%2CfollowerCount&profilePictureSizes=s%2Cm%2Cl&avatarSizes=s%2Cm%2Cl&languagesUsedLanguageSet=set4" )]
         Task<GetProfileResponse> GetProfileAsync( GetProfileRequest request );
+
+        [Get( "/userProfile/v1/users/{request.OnlineId}/friends/profiles2?fields=onlineId%2CaboutMe%2CconsoleAvailability%2ClanguagesUsed%2CavatarUrls%2CpersonalDetail%2CpersonalDetail(%40default%2CprofilePictureUrls)%2CprimaryOnlineStatus%2CtrophySummary(level%2Cprogress%2CearnedTrophies)%2Cplus%2CisOfficiallyVerified%2CfriendRelation%2CpersonalDetailSharing%2Cpresences(%40default%2Cplatform)%2CnpId%2Cblocking%2Cfollowing&profilePictureSizes=s%2Cm%2Cl&avatarSizes=s%2Cm%2Cl&languagesUsedLanguageSet=set4&limit=30&offset=0&sort=onlineStatus" )]
+        Task<GetFriendsResponse> GetFriendsAsync( GetFriendsRequest request );
     }
 }
